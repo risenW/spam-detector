@@ -33,7 +33,7 @@ def index():
     for msg in sms:
         txt = msg.body
         txt = process_sms(txt)
-        pred = model.predict_classes(txt).item()
+        pred = (model.predict(txt) > 0.5).astype("int32").item()
 
         if pred == 1:
             spam_msg.append(msg)
@@ -43,7 +43,6 @@ def index():
 
     template = render_template('index.html', spam_msg=spam_msg, not_spam_msg=not_spam_msg)
     response = make_response(template)
-    response.headers['Cache-Control'] = 'public, max-age=300, s-maxage=600'
     return response
 
 

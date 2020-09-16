@@ -16,7 +16,7 @@ def process_sms(sms):
     '''
     Apply saved tokenizer to new sms text and returns processed data
     '''
-    max_length = 10
+    max_length = 8
     sms = [sms]
     sms_proc = tokenizer.texts_to_sequences(sms)
     sms_proc = pad_sequences(sms_proc, maxlen=max_length, padding='post')
