@@ -1,17 +1,19 @@
+import os
+import warnings
+warnings.filterwarnings("ignore")
+
 from flask import Flask, render_template, make_response
 from twilio.rest import Client
 from dotenv import load_dotenv
 from model import load_model,  process_sms
 
-import warnings
-warnings.filterwarnings("ignore")
+load_dotenv() ## load environment variables
 
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 twilio_api = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-load_dotenv()
-model =load_model() ## load saved model
+model = load_model() ## load saved model
 
 
 app = Flask(__name__)
