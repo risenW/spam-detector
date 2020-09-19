@@ -29,9 +29,9 @@ sms = fetch_sms() ## get all sms from twilio
 def index():
     spam_msg = []
     not_spam_msg = []
-
     for msg in sms:
         txt = msg.body
+        print(txt)
         txt = process_sms(txt)
         pred = (model.predict(txt) > 0.5).astype("int32").item()
 
