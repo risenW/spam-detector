@@ -1,6 +1,6 @@
 ## An SMS Spam detector built with Keras, Flask and Twilio. 
 
-<img src='src/spam-demo.png' />
+<img src='spam-demo.png' />
 
 -----------
 To run this application, clone the repo:
