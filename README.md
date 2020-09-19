@@ -7,7 +7,9 @@ To run this application, clone the repo:
 
 ```bash
  git clone https://github.com/risenW/spam-detector.git
+ pip install -r requirements.txt
  cd spam-detection/src
+
 ```
 
 To enable SMS capabilities, you need a [Twilio] account. Follow the steps below to set it up:
