@@ -16,6 +16,13 @@ To enable SMS capabilities, you need a [Twilio] account. Follow the steps below 
 - [Verify your personal phone number](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account#verify-your-personal-phone-number)
 - [Get your first Twilio phone number](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account#get-your-first-twilio-phone-number)
 
+Get your Twilio SID and Auth token from your account dashboard, and add it to the .env file
+
+```
+TWILIO_ACCOUNT_SID=<your_sid_goes_here>
+TWILIO_AUTH_TOKEN=<your_token_goes_here>
+```
+
 Next, send a couple of Spam and Non-spam messages to your registered twilio phone number. Here are a few I tested after training:
 
 **For Non-Spam:**
