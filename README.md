@@ -7,6 +7,7 @@ To run this application, clone the repo:
 
 ```bash
  git clone https://github.com/risenW/spam-detector.git
+ cd tensorflow_serving_app
  pip install -r requirements.txt
  cd spam-detection/src
 
