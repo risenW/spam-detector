@@ -22,3 +22,6 @@ def process_sms(sms):
     sms_proc = pad_sequences(sms_proc, maxlen=max_length, padding='post')
     
     return sms_proc
+
+
+
